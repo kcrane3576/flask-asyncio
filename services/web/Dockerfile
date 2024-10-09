@@ -1,17 +1,1 @@
-# pull official base image
-FROM python:3.9.5-slim-buster
-
-# set work directory
-WORKDIR /usr/src/app
-
-# set environment variables
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
-
-# install dependencies
-RUN pip install --upgrade pip
-COPY ./requirements.txt /usr/src/app/requirements.txt
-RUN pip install -r requirements.txt
-
-# copy project
-COPY . /usr/src/app/
+IyBwdWxsIG9mZmljaWFsIGJhc2UgaW1hZ2UKRlJPTSBweXRob246My45LjUtc2xpbS1idXN0ZXJAc2hhMjU2Ojk4Mjg1NzNlNmEwYjAyYjZkMGZmMGJhZTA3MTZiMDI3YWEyMWNmOGU1OWFjMThhNzY3MjRkMjE2YmFiN2VmMDQKCiMgc2V0IHdvcmsgZGlyZWN0b3J5CldPUktESVIgL3Vzci9zcmMvYXBwCgojIHNldCBlbnZpcm9ubWVudCB2YXJpYWJsZXMKRU5WIFBZVEhPTkRPTlRXUklURUJZVEVDT0RFIDEKRU5WIFBZVEhPTlVOQlVGRkVSRUQgMQoKIyBpbnN0YWxsIGRlcGVuZGVuY2llcwpSVU4gcGlwIGluc3RhbGwgLS11cGdyYWRlIHBpcApDT1BZIC4vcmVxdWlyZW1lbnRzLnR4dCAvdXNyL3NyYy9hcHAvcmVxdWlyZW1lbnRzLnR4dApSVU4gcGlwIGluc3RhbGwgLXIgcmVxdWlyZW1lbnRzLnR4dAoKIyBjb3B5IHByb2plY3QKQ09QWSAuIC91c3Ivc3JjL2FwcC8=
